@@ -5,7 +5,7 @@ let articulosElegidos = [];
 while (true) {
 
     let nombreArticulo = prompt("Ingrese el nombre del Articulo que quiere llevar:");
-    let precioArticulo = parseFloat(prompt("Ingrese el precio del artículo:"));
+    let precioArticulo = parseFloat(prompt("Ingrese el precio del articulo:"));
 
     if (!isNaN(precioArticulo)) {
         if(presupuestoInicial - costoViaje >= precioArticulo) {
@@ -14,18 +14,18 @@ while (true) {
             );
 
         }  else {
-            console.log("El precio del artículo excede su presupuesto restante. Por favor, elija otro artículo.");
+            console.log("El precio del articulo excede su presupuesto restante. Por favor, elija otro articulo.");
         }
     } else {
-        console.log("Por favor, ingrese un precio válido para el artículo.");
+        console.log("Por favor, ingrese un precio valido para el articulo.");
     }
-    let respuesta = confirm("¿Desea agregar otro artículo?");
+    let respuesta = confirm("¿Desea agregar otro articulo?");
     if (respuesta == false){
         break;
     }
     
 }
-console.log("Lista de artículos elegidos:");
+console.log("Lista de articulos elegidos:");
 articulosElegidos.forEach(articulo => {
     console.log(`- ${articulo.nombre}: ${articulo.precio}`);
 });
@@ -34,9 +34,9 @@ articulosElegidos.forEach(articulo => {
 // Calculo el presupuesto restante
 let presupuestoRestanteDespuesCompras = presupuestoInicial - costoViaje - articulosElegidos.reduce((total, articulo) => total + articulo.precio, 0);
 
-console.log(`Presupuesto restante después de comprar los artículos: ${presupuestoRestanteDespuesCompras.toFixed(2)}`); //formatea un numero flotante a la cantidad de numeros deseada
+console.log(`Presupuesto restante despues de comprar los articulos: ${presupuestoRestanteDespuesCompras.toFixed(2)}`); //formatea un numero flotante a la cantidad de numeros deseada
 
-// posibilidad de artículo extra
+// posibilidad de articulo extra
 if (presupuestoRestanteDespuesCompras >= 0) {
     console.log("Te queda algo de presupuesto");
 } else {
