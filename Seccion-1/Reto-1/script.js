@@ -1,11 +1,7 @@
 
-// solicitar el destino del viaje
+
 const destino = prompt("A donde quiere viajar? Digite el destino: ");
-
-// cantidad de días
 let cantidadDias = parseInt(prompt("Cuantos dias te vas de viaje: "));
-
-// presupuesto
 let presupuesto = parseInt(prompt("Por favor, ingresa tu presupuesto para el viaje en USD:"));
 
 const costoDiario = 50; // Costo diario estimado y definido
